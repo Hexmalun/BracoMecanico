@@ -18,12 +18,6 @@ public class TelaInicial extends javax.swing.JFrame {
      */
     public TelaInicial() {
         initComponents();
-        sliderGarra = new JSlider(JSlider.HORIZONTAL, 90, 140, 120);
-        sliderGarra.setMajorTickSpacing(10);
-        sliderGarra.setMinorTickSpacing(1);
-        sliderGarra.setPaintTicks(true);
-        sliderGarra.setPaintLabels(true);
-        sliderGarra.setVisible(false);
         
         
         
@@ -31,14 +25,6 @@ public class TelaInicial extends javax.swing.JFrame {
     
     public TelaInicial(int a) {
         initComponents();
-        sliderGarra = new JSlider(JSlider.HORIZONTAL, 90, 140, a);
-        sliderGarra.setMajorTickSpacing(10);
-        sliderGarra.setMinorTickSpacing(1);
-        sliderGarra.setPaintTicks(true);
-        sliderGarra.setPaintLabels(true);
-        sliderGarra.setVisible(false);
-        sliderGarra.getValue();
-        textFieldGarra.setText(""+sliderGarra.getValue());
         
         
         
@@ -144,7 +130,26 @@ public class TelaInicial extends javax.swing.JFrame {
         sliderGarra.setMinorTickSpacing(1);
         sliderGarra.setPaintTicks(true);
         sliderGarra.setPaintLabels(true);
-       
+        sliderGarra.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliderGarraStateChanged(evt);
+            }
+        });
+        sliderGarra.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                sliderGarraMouseDragged(evt);
+            }
+        });
+        sliderGarra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                sliderGarraMouseExited(evt);
+            }
+        });
+        sliderGarra.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                sliderGarraPropertyChange(evt);
+            }
+        });
 
         textFieldGarra.setText("Valor");
         textFieldGarra.addActionListener(new java.awt.event.ActionListener() {
@@ -595,7 +600,24 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGravarActionPerformed
 
+    private void sliderGarraStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderGarraStateChanged
+      JSlider jSlider = (JSlider)evt.getSource(); 
+     int iValue = jSlider.getValue(); 
+     textFieldGarra.setText (""+iValue); 
+    }//GEN-LAST:event_sliderGarraStateChanged
+
+    private void sliderGarraMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderGarraMouseDragged
   
+    }//GEN-LAST:event_sliderGarraMouseDragged
+
+    private void sliderGarraPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_sliderGarraPropertyChange
+      // TODO add your handling code here:
+    }//GEN-LAST:event_sliderGarraPropertyChange
+
+    private void sliderGarraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderGarraMouseExited
+  // TODO add your handling code here:
+    }//GEN-LAST:event_sliderGarraMouseExited
+
     /**
      * @param args the command line arguments
      */

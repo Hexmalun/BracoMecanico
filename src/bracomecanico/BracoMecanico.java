@@ -16,7 +16,7 @@ public class BracoMecanico {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        TelaInicial tl = new TelaInicial(90);
+        TelaInicial tl = new TelaInicial();
         tl.setVisible(true);
     }
     

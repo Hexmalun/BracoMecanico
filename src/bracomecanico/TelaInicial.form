@@ -30,124 +30,6 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnAbrirSequencias" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnParar" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnGravar" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel8" max="32767" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="sliderGarra" min="-2" pref="190" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="sliderPulsoS" min="-2" pref="190" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="textFieldGarra" min="-2" pref="42" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="textFieldPulsoS" min="-2" pref="42" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                      <Component id="sliderCotovelo" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="textFieldCotovelo" min="-2" pref="40" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="sliderPulsoG" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="textFieldPulsoG" min="-2" pref="42" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnUpGarra" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnUpPulsoS" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnDownGarra" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnDownPulsoS" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="btnUpPulsoG" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnDownPulsoG" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="btnUpCotovelo" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnDownCotovelo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnUpOmbro" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnDownOmbro" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnUpCintura" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnDownCintura" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -161,39 +43,43 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                      <Component id="sliderCintura" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="sliderOmbro" min="-2" pref="190" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="sliderGarra" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="sliderOmbro" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="sliderPulsoS" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="sliderPulsoG" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="sliderCotovelo" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                                  <Component id="sliderCintura" min="-2" pref="190" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="textFieldCintura" pref="42" max="32767" attributes="0"/>
-                                  <Component id="textFieldOmbro" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="textFieldOmbro" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="textFieldCintura" alignment="0" pref="48" max="32767" attributes="0"/>
+                                      <Component id="textFieldCotovelo" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="textFieldGarra" alignment="1" pref="48" max="32767" attributes="0"/>
+                                  <Component id="textFieldPulsoS" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="textFieldPulsoG" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnParar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGravar" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -209,152 +95,63 @@
                   <Component id="btnRadio50" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnRadio100" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textFieldGarra" alignment="3" max="32767" attributes="0"/>
-                      <Component id="btnUpGarra" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnDownGarra" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sliderGarra" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="sliderGarra" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="textFieldGarra" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" pref="23" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textFieldPulsoS" alignment="3" max="32767" attributes="0"/>
-                              <Component id="btnUpPulsoS" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnDownPulsoS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="sliderPulsoS" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="sliderPulsoS" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="textFieldPulsoS" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnUpPulsoG" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDownPulsoG" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="textFieldPulsoG" min="-2" max="-2" attributes="0"/>
+                  <Component id="sliderPulsoG" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="textFieldCotovelo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldCotovelo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnUpCotovelo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDownCotovelo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="textFieldOmbro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textFieldPulsoG" alignment="3" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="sliderPulsoG" min="-2" pref="49" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="sliderCotovelo" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="textFieldOmbro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnUpOmbro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDownOmbro" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                      <Component id="sliderOmbro" min="-2" pref="50" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldCintura" alignment="3" max="32767" attributes="0"/>
-                          <Component id="btnUpCintura" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDownCintura" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="sliderCintura" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="sliderOmbro" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="btnAbrirSequencias" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="sliderCintura" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="textFieldCintura" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="77" max="32767" attributes="0"/>
               <Component id="btnParar" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnGravar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -437,222 +234,73 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="textFieldGarra">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldGarraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="140"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="90"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownGarra">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownGarraActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnUpGarra">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="120"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JSlider" name="sliderPulsoS">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sliderPulsoSStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderPulsoS = new JSlider(JSlider.HORIZONTAL, 90, 140, 125);&#xa;        sliderPulsoS.setMajorTickSpacing(10);&#xa;        sliderPulsoS.setMinorTickSpacing(1);&#xa;        sliderPulsoS.setPaintTicks(true);&#xa;        sliderPulsoS.setPaintLabels(true);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderPulsoS = new JSlider(JSlider.HORIZONTAL, 30, 120, 75);&#xa;        sliderPulsoS.setMajorTickSpacing(10);&#xa;        sliderPulsoS.setMinorTickSpacing(1);&#xa;        sliderPulsoS.setPaintTicks(true);&#xa;        sliderPulsoS.setPaintLabels(true);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="30"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldPulsoS">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldPulsoSActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpPulsoS">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownPulsoS">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownPulsoSActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="5"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JSlider" name="sliderPulsoG">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sliderPulsoGStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderPulsoG = new JSlider(JSlider.HORIZONTAL, 90, 140, 125);&#xa;        sliderPulsoG.setMajorTickSpacing(10);&#xa;        sliderPulsoG.setMinorTickSpacing(1);&#xa;        sliderPulsoG.setPaintTicks(true);&#xa;        sliderPulsoG.setPaintLabels(true);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderPulsoG = new JSlider(JSlider.HORIZONTAL, 60, 150, 105);&#xa;        sliderPulsoG.setMajorTickSpacing(10);&#xa;        sliderPulsoG.setMinorTickSpacing(1);&#xa;        sliderPulsoG.setPaintTicks(true);&#xa;        sliderPulsoG.setPaintLabels(true);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="60"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldPulsoG">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldPulsoGActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpPulsoG">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownPulsoG">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownPulsoGActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="9"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JSlider" name="sliderCotovelo">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sliderCotoveloStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderCotovelo = new JSlider(JSlider.HORIZONTAL, 90, 140, 125);&#xa;        sliderCotovelo.setMajorTickSpacing(10);&#xa;        sliderCotovelo.setMinorTickSpacing(1);&#xa;        sliderCotovelo.setPaintTicks(true);&#xa;        sliderCotovelo.setPaintLabels(true);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderCotovelo = new JSlider(JSlider.HORIZONTAL, 40, 130, 85);&#xa;        sliderCotovelo.setMajorTickSpacing(10);&#xa;        sliderCotovelo.setMinorTickSpacing(1);&#xa;        sliderCotovelo.setPaintTicks(true);&#xa;        sliderCotovelo.setPaintLabels(true);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel15">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="130"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldCotovelo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldCotoveloActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpCotovelo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownCotovelo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownCotoveloActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="11"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JSlider" name="sliderOmbro">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sliderOmbroStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderOmbro = new JSlider(JSlider.HORIZONTAL, 90, 140, 125);&#xa;        sliderOmbro.setMajorTickSpacing(10);&#xa;        sliderOmbro.setMinorTickSpacing(1);&#xa;        sliderOmbro.setPaintTicks(true);&#xa;        sliderOmbro.setPaintLabels(true);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderOmbro = new JSlider(JSlider.HORIZONTAL, 50, 110, 80);&#xa;        sliderOmbro.setMajorTickSpacing(10);&#xa;        sliderOmbro.setMinorTickSpacing(1);&#xa;        sliderOmbro.setPaintTicks(true);&#xa;        sliderOmbro.setPaintLabels(true);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel17">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="110"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldOmbro">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldOmbroActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnUpOmbro">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownOmbro">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownOmbroActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel18">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JSlider" name="sliderCintura">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sliderCinturaStateChanged"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderCintura  = new JSlider(JSlider.HORIZONTAL, 90, 140, 125);&#xa;        sliderCintura.setMajorTickSpacing(10);&#xa;        sliderCintura.setMinorTickSpacing(1);&#xa;        sliderCintura.setPaintTicks(true);&#xa;        sliderCintura.setPaintLabels(true);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sliderCintura  = new JSlider(JSlider.HORIZONTAL, 10, 110, 60);&#xa;        sliderCintura.setMajorTickSpacing(10);&#xa;        sliderCintura.setMinorTickSpacing(1);&#xa;        sliderCintura.setPaintTicks(true);&#xa;        sliderCintura.setPaintLabels(true);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel19">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="110"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="textFieldCintura">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldCinturaActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnUpCintura">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDownCintura">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="v"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDownCinturaActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnAbrirSequencias">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Abrir Sequ&#xea;ncias"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAbrirSequenciasActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnParar">

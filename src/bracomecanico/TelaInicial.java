@@ -456,7 +456,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private void sliderGarraStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderGarraStateChanged
        JSlider jSlider = (JSlider)evt.getSource(); 
        int iValue = jSlider.getValue(); 
-       textFieldNome.setText (""+iValue); 
+       textFieldGarra1.setText (""+iValue); 
     }//GEN-LAST:event_sliderGarraStateChanged
 
     private void sliderGarraMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderGarraMouseDragged

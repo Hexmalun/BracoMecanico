@@ -11,7 +11,7 @@ package bracomecanico;
  */
 public class StringB {
     private String env = "";
-    public StringB (int c, int [][] m){
+    public StringB (int c, String [][] m){
         env = ""+c;
         for(int i = 0; i < m.length; i++){
             env = env+"/"+m[i][0];

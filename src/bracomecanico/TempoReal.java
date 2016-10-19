@@ -65,6 +65,7 @@ public class TempoReal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Braço Mecânico");
 
         buttonGroup1.add(btnRadio10);
         btnRadio10.setText("10ms");
@@ -209,6 +210,11 @@ public class TempoReal extends javax.swing.JFrame {
         });
 
         jButton1.setText("Voltar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         textFieldGarra1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -408,6 +414,13 @@ public class TempoReal extends javax.swing.JFrame {
     private void textFieldGarra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldGarra1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldGarra1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        MenuPrincipal mp = new MenuPrincipal();
+        this.dispose();
+        mp.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments

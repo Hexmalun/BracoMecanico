@@ -72,8 +72,14 @@ public class Sequencia extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Braço Mecânico");
 
         jButton1.setText("Voltar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -121,6 +127,11 @@ public class Sequencia extends javax.swing.JFrame {
         });
 
         btnParar.setText("Salvar");
+        btnParar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPararMouseClicked(evt);
+            }
+        });
         btnParar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPararActionPerformed(evt);
@@ -218,6 +229,17 @@ public class Sequencia extends javax.swing.JFrame {
     private void btnPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPararActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPararActionPerformed
+
+    private void btnPararMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPararMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPararMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        MenuPrincipal mp = new MenuPrincipal();
+        this.dispose();
+        mp.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments

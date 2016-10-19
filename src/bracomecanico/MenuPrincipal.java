@@ -16,6 +16,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
      */
     public MenuPrincipal() {
         initComponents();
+        
     }
 
     /**
@@ -34,6 +35,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Braço Mecânico");
+        setIconImage(getIconImage());
+        setPreferredSize(new java.awt.Dimension(400, 200));
 
         jButton1.setText("Tempo Real");
         jButton1.setActionCommand("Treal");

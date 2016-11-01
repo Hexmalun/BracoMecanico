@@ -5,6 +5,11 @@
  */
 package bracomecanico;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author Mateus
@@ -117,6 +122,11 @@ public class Sequencia extends javax.swing.JFrame {
 
         jButton2.setText("Buscar Sequencia");
         jButton2.setActionCommand("BuscarSequencia");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Nome:");
 
@@ -240,6 +250,18 @@ public class Sequencia extends javax.swing.JFrame {
         this.dispose();
         mp.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JFileChooser fc = new JFileChooser();
+        int returnVal = fc.showOpenDialog(this);
+    if (returnVal == JFileChooser.APPROVE_OPTION) {
+        File file = fc.getSelectedFile();
+        String s = file.getName();
+       System.out.println(s);
+    } else {
+        System.out.println("File access cancelled by user.");
+    }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -13,6 +13,7 @@ public class StringB {
     private String env = "";
     public StringB (int c, String [][] m){
         env = ""+c;
+        if(m.length > 1) env += "/" + m.length;
         for(int i = 0; i < m.length; i++){
             env = env+"/"+m[i][0];
             for(int j = 1; j < 7;j++){

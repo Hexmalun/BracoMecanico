@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.arquivo;
+package arquivo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,13 +17,13 @@ import java.util.Map;
 public class ArquivoHelper {
     
     private Map<String, Object> parse(String  in){
-        Map<String, Object> retorno = new HashMap<>(), aux;
+        Map<String, Object> retorno = new HashMap<String, Object>(), aux;
         int command = Integer.parseInt(in.charAt(0)+"");
         String[] val;
         switch(command){
             case 0:
                 retorno.put("comando", "Posicao");
-                aux = new HashMap<>();
+                aux = new HashMap<String, Object>();
                 val = in.substring(2).split(",");
                 aux.put("velocidade", Integer.parseInt(val[0]));
                 aux.put("garra", Integer.parseInt(val[1]));
@@ -36,11 +36,11 @@ public class ArquivoHelper {
             break;
             case 1:
                 retorno.put("comando", "Sequencia");
-                List<Map<String, Object>> sequencia = new ArrayList<>();
+                List<Map<String, Object>> sequencia = new ArrayList<Map<String, Object>>();
                 String[] pos = in.substring(2).split("/");
                 for(int i = 0; i < pos.length; i++){
                     val = pos[i].split(",");
-                    aux = new HashMap<>();
+                    aux = new HashMap<String, Object>();
                     aux.put("velocidade", Integer.parseInt(val[0]));
                     aux.put("garra", Integer.parseInt(val[1]));
                     aux.put("pulso_sobe", Integer.parseInt(val[2]));

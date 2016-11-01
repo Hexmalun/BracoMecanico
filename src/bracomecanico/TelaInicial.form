@@ -233,6 +233,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRadio100ActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="btnRadio100.setSelected(true);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -292,6 +295,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldPulsoSActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldPulsoS.setText(&quot;&quot;+sliderPulsoS.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JSlider" name="sliderPulsoG">
       <Events>
@@ -305,6 +311,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldPulsoGActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldPulsoG.setText(&quot;&quot;+sliderPulsoG.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JSlider" name="sliderCotovelo">
       <Events>
@@ -318,6 +327,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldCotoveloActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldCotovelo.setText(&quot;&quot;+sliderCotovelo.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JSlider" name="sliderOmbro">
       <Events>
@@ -331,6 +343,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldOmbroActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldOmbro.setText(&quot;&quot;+sliderOmbro.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JSlider" name="sliderCintura">
       <Events>
@@ -344,6 +359,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldCinturaActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldCintura.setText(&quot;&quot;+sliderCintura.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btnParar">
       <Properties>
@@ -396,6 +414,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldGarra1ActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="textFieldGarra1.setText(&quot;&quot;+sliderGarra.getValue());"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>

@@ -11,15 +11,21 @@ package bracomecanico;
  */
 public class StringB {
     private String env = "";
-    public StringB (int c, String [][] m){
+    public StringB (int c, int v, String [][] m){
         env = ""+c;
         if(m.length > 1) env += "/" + m.length;
         for(int i = 0; i < m.length; i++){
-            env = env+"/"+m[i][0];
-            for(int j = 1; j < 7;j++){
-                env = env+","+m[i][j];
-            }        
+            if(!m[i][0].equals("null")){
+                env = env+"/"+v+","+m[i][0];
+                for(int j = 1; j < m[0].length;j++){
+                    env = env+","+m[i][j];
+                }        
+            }
         }
+    }
+    
+    public StringB (){
+        
     }
     public String getString(){
         return env;

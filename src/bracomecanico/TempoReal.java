@@ -370,7 +370,7 @@ public class TempoReal extends javax.swing.JFrame {
        String [][] m = new String [][] {{textFieldGarra1.getText(), textFieldPulsoS.getText(),
                                          textFieldPulsoG.getText(), textFieldCotovelo.getText(),
                                          textFieldOmbro.getText(), textFieldCintura.getText()}};
-       StringB sb = new StringB(0,m);
+     //  StringB sb = new StringB(0,m);
     }//GEN-LAST:event_sliderGarraStateChanged
 
     private void sliderGarraMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderGarraMouseDragged

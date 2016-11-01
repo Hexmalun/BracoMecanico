@@ -5,6 +5,14 @@
  */
 package bracomecanico;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JSlider;
 
 /**
@@ -90,6 +98,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         buttonGroup1.add(btnRadio100);
         btnRadio100.setText("100ms");
+        btnRadio100.setSelected(true);
         btnRadio100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRadio100ActionPerformed(evt);
@@ -151,6 +160,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        textFieldPulsoS.setText(""+sliderPulsoS.getValue());
         textFieldPulsoS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldPulsoSActionPerformed(evt);
@@ -168,6 +178,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        textFieldPulsoG.setText(""+sliderPulsoG.getValue());
         textFieldPulsoG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldPulsoGActionPerformed(evt);
@@ -185,6 +196,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        textFieldCotovelo.setText(""+sliderCotovelo.getValue());
         textFieldCotovelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldCotoveloActionPerformed(evt);
@@ -202,6 +214,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        textFieldOmbro.setText(""+sliderOmbro.getValue());
         textFieldOmbro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldOmbroActionPerformed(evt);
@@ -219,6 +232,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        textFieldCintura.setText(""+sliderCintura.getValue());
         textFieldCintura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldCinturaActionPerformed(evt);
@@ -269,6 +283,7 @@ public class TelaInicial extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        textFieldGarra1.setText(""+sliderGarra.getValue());
         textFieldGarra1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldGarra1ActionPerformed(evt);
@@ -446,19 +461,47 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_textFieldCinturaActionPerformed
 
     private void btnPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPararActionPerformed
-        // TODO add your handling code here:
+                try {
+            BufferedWriter br = new BufferedWriter(new FileWriter(textFieldNome.getText()+".bm"));            
+            String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
+            for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
+                for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
+                    seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
+                }
+            }
+            StringB s = new StringB();
+            System.out.println("aqui");
+            if (btnRadio100.isSelected()){
+                s = new StringB(1,100,seq);
+            }else if(btnRadio50.isSelected()){
+                s = new StringB(1,100,seq);
+            }else if(btnRadio10.isSelected()){
+                s = new StringB(1,100,seq);
+            }
+            br.write(s.getString(), 0, s.getString().length());
+            br.flush();
+            br.close();
+            System.out.println(""+s.getString());
+            
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaInicial.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(TelaInicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnPararActionPerformed
 
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
         
-        
-        jTable1.getModel().setValueAt(textFieldNome.getText(), linha, 0);
+        jTable1.getModel().setValueAt(textFieldGarra1.getText(), linha, 0);
         jTable1.getModel().setValueAt(textFieldPulsoS.getText(), linha, 1);
         jTable1.getModel().setValueAt(textFieldPulsoG.getText(), linha, 2);
         jTable1.getModel().setValueAt(textFieldCotovelo.getText(), linha, 3);
         jTable1.getModel().setValueAt(textFieldOmbro.getText(), linha, 4);
         jTable1.getModel().setValueAt(textFieldCintura.getText(), linha, 5);        
         linha++;
+        
+        
         
     }//GEN-LAST:event_btnGravarActionPerformed
 

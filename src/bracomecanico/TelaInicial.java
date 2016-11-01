@@ -11,6 +11,7 @@ import javax.swing.JSlider;
  *
  * @author Mateus
  */
+
 public class TelaInicial extends javax.swing.JFrame {
     private int linha = 0;
     /**
@@ -449,6 +450,8 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPararActionPerformed
 
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
+        
+        
         jTable1.getModel().setValueAt(textFieldNome.getText(), linha, 0);
         jTable1.getModel().setValueAt(textFieldPulsoS.getText(), linha, 1);
         jTable1.getModel().setValueAt(textFieldPulsoG.getText(), linha, 2);

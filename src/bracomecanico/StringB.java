@@ -11,9 +11,9 @@ package bracomecanico;
  */
 public class StringB {
     private String env = "";
-    public StringB (int c, int v, String [][] m){
+    public StringB (int c, int v, String [][] m, int l){
         env = ""+c;
-        if(m.length > 1) env += "/" + m.length;
+        if(m.length > 1) env += "/" + l;
         for(int i = 0; i < m.length; i++){
             if(!m[i][0].equals("null")){
                 env = env+"/"+v+","+m[i][0];

@@ -80,6 +80,7 @@ public class TempoReal extends javax.swing.JFrame {
 
         buttonGroup1.add(btnRadio100);
         btnRadio100.setText("100ms");
+        btnRadio100.setSelected(true);
         btnRadio100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRadio100ActionPerformed(evt);

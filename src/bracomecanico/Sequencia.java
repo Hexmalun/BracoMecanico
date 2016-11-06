@@ -5,17 +5,27 @@
  */
 package bracomecanico;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import main.java.arquivo.ArquivoHelper;
 
 /**
  *
  * @author Mateus
  */
 public class Sequencia extends javax.swing.JFrame {
-
+    private File f;
+    private int linhas;
     /**
      * Creates new form Sequencia
      */
@@ -49,6 +59,9 @@ public class Sequencia extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         textFieldNome1 = new javax.swing.JTextField();
         btnParar = new javax.swing.JButton();
+        enviar = new javax.swing.JButton();
+        Iniciar = new javax.swing.JButton();
+        parar = new javax.swing.JButton();
 
         btnRadio10.setText("10ms");
         btnRadio10.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +113,7 @@ public class Sequencia extends javax.swing.JFrame {
                 "Garra", "Pulso S", "Pulso G", "Cotovelo", "Ombro", "Cintura"
             }
         ));
+        jTable1.setVisible(false);
         jScrollPane1.setViewportView(jTable1);
 
         btnRadio11.setText("10ms");
@@ -148,6 +162,17 @@ public class Sequencia extends javax.swing.JFrame {
             }
         });
 
+        enviar.setText("Enviar");
+        enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviarActionPerformed(evt);
+            }
+        });
+
+        Iniciar.setText("Iniciar");
+
+        parar.setText("Parar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,7 +187,7 @@ public class Sequencia extends javax.swing.JFrame {
                         .addComponent(btnRadio11)
                         .addGap(2, 2, 2)
                         .addComponent(btnRadio51)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnRadio101))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
@@ -176,6 +201,12 @@ public class Sequencia extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(btnParar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enviar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Iniciar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(parar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -198,14 +229,18 @@ public class Sequencia extends javax.swing.JFrame {
                         .addGap(4, 4, 4)
                         .addComponent(jLabel2))
                     .addComponent(btnRadio11)
-                    .addComponent(btnRadio51)
-                    .addComponent(btnRadio101))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnRadio51)
+                        .addComponent(btnRadio101)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(btnParar))
+                    .addComponent(btnParar)
+                    .addComponent(enviar)
+                    .addComponent(Iniciar)
+                    .addComponent(parar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -237,7 +272,31 @@ public class Sequencia extends javax.swing.JFrame {
     }//GEN-LAST:event_textFieldNome1ActionPerformed
 
     private void btnPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPararActionPerformed
-        // TODO add your handling code here:
+        String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
+        if(!seq[0][0].equals("")){
+            try {
+                BufferedWriter br = new BufferedWriter(new FileWriter(textFieldNome.getText()+".bm"));
+                for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
+                    for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
+                        seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
+                    }
+                }
+                StringB s = new StringB();
+                System.out.println("aqui");
+                if (btnRadio101.isSelected()){
+                    s = new StringB(1,100,seq,linhas);
+                }else if(btnRadio51.isSelected()){
+                    s = new StringB(1,100,seq,linhas);
+                }else if(btnRadio11.isSelected()){
+                    s = new StringB(1,100,seq,linhas);
+                }
+                br.write(s.getString(), 0, s.getString().length());
+                br.flush();
+                br.close();  
+            } catch (IOException ex) {
+                Logger.getLogger(Sequencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }    
     }//GEN-LAST:event_btnPararActionPerformed
 
     private void btnPararMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPararMouseClicked
@@ -256,12 +315,47 @@ public class Sequencia extends javax.swing.JFrame {
         int returnVal = fc.showOpenDialog(this);
     if (returnVal == JFileChooser.APPROVE_OPTION) {
         File file = fc.getSelectedFile();
-        String s = file.getName();
-       System.out.println(s);
+            try {            
+                BufferedReader br = new BufferedReader(new FileReader(file));
+               
+                String in = br.readLine();
+                String[] pos = in.substring(2).split("/");
+                linhas = Integer.parseInt(pos[0]);
+                int linha = 0;
+                int vel = 0;
+                for(int i = 1; i < pos.length; i++){
+                    String [] val = pos[i].split(",");
+                    vel = Integer.parseInt(val[0]);
+                    jTable1.getModel().setValueAt(val[1], linha, 0);
+                    jTable1.getModel().setValueAt(val[2], linha, 1);
+                    jTable1.getModel().setValueAt(val[3], linha, 2);
+                    jTable1.getModel().setValueAt(val[4], linha, 3);
+                    jTable1.getModel().setValueAt(val[5], linha, 4);
+                    jTable1.getModel().setValueAt(val[6], linha, 5);        
+                    linha++;
+                }
+                if (vel == 100){
+                    btnRadio101.setSelected(true);
+                }else if(vel == 50){
+                    btnRadio51.setSelected(true);
+                }else if(vel == 10){
+                    btnRadio11.setSelected(true);
+                }
+                
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Sequencia.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Sequencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
     } else {
         System.out.println("File access cancelled by user.");
     }
+    jTable1.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enviarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,6 +393,7 @@ public class Sequencia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Iniciar;
     private javax.swing.JButton btnParar;
     private javax.swing.JRadioButton btnRadio10;
     private javax.swing.JRadioButton btnRadio100;
@@ -306,6 +401,7 @@ public class Sequencia extends javax.swing.JFrame {
     private javax.swing.JRadioButton btnRadio11;
     private javax.swing.JRadioButton btnRadio50;
     private javax.swing.JRadioButton btnRadio51;
+    private javax.swing.JButton enviar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -314,6 +410,7 @@ public class Sequencia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton parar;
     private javax.swing.JTextField textFieldNome;
     private javax.swing.JTextField textFieldNome1;
     // End of variables declaration//GEN-END:variables

@@ -61,8 +61,15 @@
                                   <Component id="jLabel1" min="-2" pref="51" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="278" max="-2" attributes="0"/>
+                                  <Component id="Iniciar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="parar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="sliderPulsoG" min="-2" pref="275" max="-2" attributes="0"/>
@@ -191,6 +198,10 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnParar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Component id="Iniciar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="parar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -405,7 +416,7 @@
         <Component class="javax.swing.JTable" name="jTable1">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTable()"/>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTable1.setModel(new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Garra&quot;, &quot;Pulso S&quot;, &quot;Pulso G&quot;, &quot;Cotovelo&quot;, &quot;Ombro&quot;, &quot;Cintura&quot;&#xa;    }&#xa;));"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTable1.setModel(new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null},&#xa;        {null, null, null, null, null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Garra&quot;, &quot;Pulso S&quot;, &quot;Pulso G&quot;, &quot;Cotovelo&quot;, &quot;Ombro&quot;, &quot;Cintura&quot;&#xa;    }&#xa;));&#xa;jTable1.setVisible(false);"/>
           </AuxValues>
         </Component>
       </SubComponents>
@@ -421,6 +432,16 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="text" type="java.lang.String" value="Velocidade"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Iniciar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Iniciar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="parar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parar"/>
       </Properties>
     </Component>
   </SubComponents>

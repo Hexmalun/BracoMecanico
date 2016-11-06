@@ -7,6 +7,7 @@ package bracomecanico;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -79,6 +80,8 @@ public class TelaInicial extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         textFieldGarra1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        Iniciar = new javax.swing.JButton();
+        parar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Braço Mecânico");
@@ -281,6 +284,7 @@ public class TelaInicial extends javax.swing.JFrame {
                 "Garra", "Pulso S", "Pulso G", "Cotovelo", "Ombro", "Cintura"
             }
         ));
+        jTable1.setVisible(false);
         jScrollPane1.setViewportView(jTable1);
 
         textFieldGarra1.setText(""+sliderGarra.getValue());
@@ -291,6 +295,10 @@ public class TelaInicial extends javax.swing.JFrame {
         });
 
         jLabel8.setText("Velocidade");
+
+        Iniciar.setText("Iniciar");
+
+        parar.setText("Parar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -325,8 +333,14 @@ public class TelaInicial extends javax.swing.JFrame {
                                         .addGap(50, 50, 50)
                                         .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(278, 278, 278)
+                                    .addComponent(Iniciar)
+                                    .addGap(35, 35, 35)
+                                    .addComponent(parar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(sliderPulsoG, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -421,7 +435,10 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addComponent(btnParar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnParar1)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Iniciar)
+                            .addComponent(parar))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -461,29 +478,41 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_textFieldCinturaActionPerformed
 
     private void btnPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPararActionPerformed
-                try {
-            BufferedWriter br = new BufferedWriter(new FileWriter(textFieldNome.getText()+".bm"));            
-            String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
-            for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
-                for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
-                    seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
+            try {
+                BufferedWriter br;
+               
+                if(textFieldNome.getText().equals("")){
+                    File file = new File("SequenciaSemNome.bm");
+                    int aux = 0;
+                    while(file.exists()){
+                        aux++;
+                        file = new File("SequenciaSemNome"+aux+".bm");                       
+                    }
+                    br = new BufferedWriter(new FileWriter(file));  
+                }else{
+                    br = new BufferedWriter(new FileWriter(textFieldNome.getText()+".bm"));  
                 }
-            }
-            StringB s = new StringB();
-            System.out.println("aqui");
-            if (btnRadio100.isSelected()){
-                s = new StringB(1,100,seq);
-            }else if(btnRadio50.isSelected()){
-                s = new StringB(1,100,seq);
-            }else if(btnRadio10.isSelected()){
-                s = new StringB(1,100,seq);
-            }
-            br.write(s.getString(), 0, s.getString().length());
-            br.flush();
-            br.close();
-            System.out.println(""+s.getString());
+                String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
+                for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
+                    for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
+                        seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
+                    }
+                }
+                StringB s = new StringB();
+                if (btnRadio100.isSelected()){
+                    s = new StringB(1,100,seq,linha);
+                }else if(btnRadio50.isSelected()){
+                    s = new StringB(1,100,seq,linha);
+                }else if(btnRadio10.isSelected()){
+                    s = new StringB(1,100,seq,linha);
+                }
+                br.write(s.getString(), 0, s.getString().length());
+                br.flush();
+                br.close();
+                System.out.println(""+s.getString());
             
             
+    jTable1.setVisible(true);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaInicial.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -606,6 +635,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Iniciar;
     private javax.swing.JButton btnGravar;
     private javax.swing.JButton btnParar;
     private javax.swing.JButton btnParar1;
@@ -624,6 +654,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton parar;
     private javax.swing.JSlider sliderCintura;
     private javax.swing.JSlider sliderCotovelo;
     private javax.swing.JSlider sliderGarra;

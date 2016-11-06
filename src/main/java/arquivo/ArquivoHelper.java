@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class ArquivoHelper {
     
-    private Map<String, Object> parse(String  in){
+    public Map<String, Object> parse(String  in){
         Map<String, Object> retorno = new HashMap<String, Object>(), aux;
         int command = Integer.parseInt(in.charAt(0)+"");
         String[] val;

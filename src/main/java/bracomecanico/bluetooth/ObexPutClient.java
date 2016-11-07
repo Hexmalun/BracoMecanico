@@ -9,14 +9,14 @@ public class ObexPutClient {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		String serverURL = "btgoep://0C84DCD3E522";
+		String serverURL = null;//"btgoep://0C84DCD3E522";
 		if ((args != null) && (args.length > 0)) {
 			serverURL = args[0];
 		}
 		if (serverURL == null) {
 			String[] searchArgs = null;
 			// Connect to OBEXPutServer from examples
-			searchArgs = new String[] { "11111111111111111111111111111123" };
+			//searchArgs = new String[] { "11111111111111111111111111111123" };
 			ServicesSearch.main(searchArgs);
 			if (ServicesSearch.serviceFound.size() == 0) {
 				System.out.println("OBEX service not found");
@@ -36,14 +36,14 @@ public class ObexPutClient {
 		}
 
 		HeaderSet hsOperation = clientSession.createHeaderSet();
-		hsOperation.setHeader(HeaderSet.NAME, "Hello.txt");
+		hsOperation.setHeader(HeaderSet.NAME, "ok");
 		hsOperation.setHeader(HeaderSet.TYPE, "text");
 
 		//Create PUT Operation
 		Operation putOperation = clientSession.put(hsOperation);
 
 		// Send some text to server
-		byte data[] = "Hello world!".getBytes("iso-8859-1");
+		byte data[] = "0/100,125,75,105,85,80,60".getBytes("iso-8859-1");
 		OutputStream os = putOperation.openOutputStream();
 		os.write(data);
 		os.close();

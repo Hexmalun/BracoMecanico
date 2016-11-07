@@ -11,7 +11,7 @@ import javax.bluetooth.*;
  */
 public class ServicesSearch {
 
-	static final UUID OBEX_FILE_TRANSFER = new UUID(0x1106);
+	static final UUID OBEX_FILE_TRANSFER = new UUID(0x1101);
 
 	public static final Vector/*<String>*/ serviceFound = new Vector();
 
@@ -73,6 +73,8 @@ public class ServicesSearch {
 
 			synchronized(serviceSearchCompletedEvent) {
 				System.out.println("search services on " + btDevice.getBluetoothAddress() + " " + btDevice.getFriendlyName(false));
+				//DiscoveryAgent agent = LocalDevice.getLocalDevice().getDiscoveryAgent();
+				//agent.startInquiry(DiscoveryAgent.GIAC, listener);
 				LocalDevice.getLocalDevice().getDiscoveryAgent().searchServices(attrIDs, searchUuidSet, btDevice, listener);
 				serviceSearchCompletedEvent.wait();
 			}

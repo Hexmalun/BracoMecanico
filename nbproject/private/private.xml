@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/main/java/bracomecanico/bluetooth/ServicesSearch.java</file>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/bracomecanico/TelaInicial.java</file>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/bracomecanico/TempoReal.java</file>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/bracomecanico/MenuPrincipal.java</file>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/bracomecanico/Sequencia.java</file>
-            <file>file:/C:/Users/júlia/Documents/GitHub/BracoMecanico/src/bracomecanico/BracoMecanico.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/main/java/bracomecanico/bluetooth/ObexPutClient.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/TelaInicial.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/StringB.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/Sequencia.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/main/java/bracomecanico/bluetooth/OBEXPutServer.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/main/java/bracomecanico/bluetooth/RemoteDeviceDiscovery.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/BracoMecanico.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/MenuPrincipal.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/BracoMecanico/src/bracomecanico/TempoReal.java</file>
         </group>
     </open-files>
 </project-private>

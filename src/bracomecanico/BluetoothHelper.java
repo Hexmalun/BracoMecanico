@@ -16,6 +16,6 @@ public class BluetoothHelper{
 
 
 	public static void send(String s){
-		os.write(s);
+		//os.write(s);
 	}
 }

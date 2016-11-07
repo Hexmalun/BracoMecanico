@@ -237,11 +237,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Iniciar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IniciarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="parar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Parar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pararActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

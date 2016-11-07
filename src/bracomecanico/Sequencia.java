@@ -12,12 +12,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
-import main.java.arquivo.ArquivoHelper;
 
 /**
  *
@@ -26,6 +23,8 @@ import main.java.arquivo.ArquivoHelper;
 public class Sequencia extends javax.swing.JFrame {
     private File f;
     private int linhas;
+    private String sequencia = "nada";
+    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form Sequencia
      */
@@ -170,8 +169,18 @@ public class Sequencia extends javax.swing.JFrame {
         });
 
         Iniciar.setText("Iniciar");
+        Iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarActionPerformed(evt);
+            }
+        });
 
         parar.setText("Parar");
+        parar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pararActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -282,13 +291,12 @@ public class Sequencia extends javax.swing.JFrame {
                     }
                 }
                 StringB s = new StringB();
-                System.out.println("aqui");
                 if (btnRadio101.isSelected()){
                     s = new StringB(1,100,seq,linhas);
                 }else if(btnRadio51.isSelected()){
-                    s = new StringB(1,100,seq,linhas);
+                    s = new StringB(1,50,seq,linhas);
                 }else if(btnRadio11.isSelected()){
-                    s = new StringB(1,100,seq,linhas);
+                    s = new StringB(1,10,seq,linhas);
                 }
                 br.write(s.getString(), 0, s.getString().length());
                 br.flush();
@@ -316,9 +324,9 @@ public class Sequencia extends javax.swing.JFrame {
     if (returnVal == JFileChooser.APPROVE_OPTION) {
         File file = fc.getSelectedFile();
             try {            
-                BufferedReader br = new BufferedReader(new FileReader(file));
-               
+                BufferedReader br = new BufferedReader(new FileReader(file));               
                 String in = br.readLine();
+                sequencia = in;
                 String[] pos = in.substring(2).split("/");
                 linhas = Integer.parseInt(pos[0]);
                 int linha = 0;
@@ -354,8 +362,17 @@ public class Sequencia extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        // TODO add your handling code here:
+        if(!sequencia.equals("nada"))
+            bh.send(sequencia);
     }//GEN-LAST:event_enviarActionPerformed
+
+    private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
+        bh.send("2");
+    }//GEN-LAST:event_IniciarActionPerformed
+
+    private void pararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pararActionPerformed
+        bh.send("3");
+    }//GEN-LAST:event_pararActionPerformed
 
     /**
      * @param args the command line arguments

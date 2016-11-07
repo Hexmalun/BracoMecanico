@@ -5,11 +5,9 @@
  */
 package bracomecanico;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -23,6 +21,8 @@ import javax.swing.JSlider;
 
 public class TelaInicial extends javax.swing.JFrame {
     private int linha = 0;
+    private String sequencia = "nada";
+    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form TelaInicial
      */
@@ -72,10 +72,10 @@ public class TelaInicial extends javax.swing.JFrame {
         textFieldOmbro = new javax.swing.JTextField();
         sliderCintura = new javax.swing.JSlider();
         textFieldCintura = new javax.swing.JTextField();
-        btnParar = new javax.swing.JButton();
+        btnSalvar = new javax.swing.JButton();
         btnGravar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        btnParar1 = new javax.swing.JButton();
+        btnEnviar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         textFieldGarra1 = new javax.swing.JTextField();
@@ -242,10 +242,10 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        btnParar.setText("Salvar");
-        btnParar.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPararActionPerformed(evt);
+                btnSalvarActionPerformed(evt);
             }
         });
 
@@ -263,10 +263,10 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        btnParar1.setText("Enviar");
-        btnParar1.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviar.setText("Enviar");
+        btnEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnParar1ActionPerformed(evt);
+                btnEnviarActionPerformed(evt);
             }
         });
 
@@ -297,8 +297,18 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel8.setText("Velocidade");
 
         Iniciar.setText("Iniciar");
+        Iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarActionPerformed(evt);
+            }
+        });
 
         parar.setText("Parar");
+        parar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pararActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -310,9 +320,9 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnGravar)
                         .addGap(44, 44, 44)
-                        .addComponent(btnParar)
+                        .addComponent(btnSalvar)
                         .addGap(36, 36, 36)
-                        .addComponent(btnParar1))
+                        .addComponent(btnEnviar))
                     .addComponent(jLabel5)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3)
@@ -432,13 +442,13 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnGravar)
-                    .addComponent(btnParar)
+                    .addComponent(btnSalvar)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnParar1)
-                        .addComponent(jButton1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Iniciar)
-                            .addComponent(parar))))
+                        .addComponent(Iniciar)
+                        .addComponent(parar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnEnviar)
+                        .addComponent(jButton1)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -477,7 +487,7 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldCinturaActionPerformed
 
-    private void btnPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPararActionPerformed
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
             try {
                 BufferedWriter br;
                
@@ -492,20 +502,7 @@ public class TelaInicial extends javax.swing.JFrame {
                 }else{
                     br = new BufferedWriter(new FileWriter(textFieldNome.getText()+".bm"));  
                 }
-                String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
-                for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
-                    for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
-                        seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
-                    }
-                }
-                StringB s = new StringB();
-                if (btnRadio100.isSelected()){
-                    s = new StringB(1,100,seq,linha);
-                }else if(btnRadio50.isSelected()){
-                    s = new StringB(1,100,seq,linha);
-                }else if(btnRadio10.isSelected()){
-                    s = new StringB(1,100,seq,linha);
-                }
+                StringB s = createString ();
                 br.write(s.getString(), 0, s.getString().length());
                 br.flush();
                 br.close();
@@ -518,7 +515,7 @@ public class TelaInicial extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(TelaInicial.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnPararActionPerformed
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
         
@@ -582,9 +579,11 @@ public class TelaInicial extends javax.swing.JFrame {
         textFieldCintura.setText (""+iValue);         // TODO add your handling code here:
     }//GEN-LAST:event_sliderCinturaStateChanged
 
-    private void btnParar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnParar1ActionPerformed
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+        sequencia = createString().getString();
+        if(!sequencia.equals(""))
+            bh.send(sequencia);
+    }//GEN-LAST:event_btnEnviarActionPerformed
 
     private void textFieldGarra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldGarra1ActionPerformed
         // TODO add your handling code here:
@@ -597,6 +596,38 @@ public class TelaInicial extends javax.swing.JFrame {
         mp.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
+         bh.send("2");
+    }//GEN-LAST:event_IniciarActionPerformed
+
+    private void pararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pararActionPerformed
+        bh.send("3");
+    }//GEN-LAST:event_pararActionPerformed
+
+    
+    private StringB createString (){
+        if(linha>0){
+            String [][] seq = new String[jTable1.getModel().getRowCount()][jTable1.getModel().getColumnCount()];
+            for(int i = 0; i< jTable1.getModel().getRowCount(); i++) {
+                for(int j = 0; j<jTable1.getModel().getColumnCount(); j++) {
+                    seq[i][j]= "" + jTable1.getModel().getValueAt(i, j);
+                }
+            }
+            StringB s = new StringB();
+            if (btnRadio100.isSelected()){
+                s = new StringB(1,100,seq,linha);
+            }else if(btnRadio50.isSelected()){
+                s = new StringB(1,50,seq,linha);
+            }else if(btnRadio10.isSelected()){
+                s = new StringB(1,10,seq,linha);
+            }
+             return s;
+        }else{
+            return new StringB();
+        }
+       
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -636,12 +667,12 @@ public class TelaInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Iniciar;
+    private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnGravar;
-    private javax.swing.JButton btnParar;
-    private javax.swing.JButton btnParar1;
     private javax.swing.JRadioButton btnRadio10;
     private javax.swing.JRadioButton btnRadio100;
     private javax.swing.JRadioButton btnRadio50;
+    private javax.swing.JButton btnSalvar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

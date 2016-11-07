@@ -13,6 +13,8 @@ import javax.swing.JSlider;
  */
 public class TempoReal extends javax.swing.JFrame {
     private int linha = 0;
+    private String sequencia = "nada";
+    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form TelaInicial
      */
@@ -136,6 +138,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldPulsoS.setText(""+sliderPulsoS.getValue());
         textFieldPulsoS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldPulsoSActionPerformed(evt);
@@ -153,6 +156,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldPulsoG.setText(""+sliderPulsoG.getValue());
         textFieldPulsoG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldPulsoGActionPerformed(evt);
@@ -170,6 +174,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldCotovelo.setText(""+sliderCotovelo.getValue());
         textFieldCotovelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldCotoveloActionPerformed(evt);
@@ -187,6 +192,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldOmbro.setText(""+sliderOmbro.getValue());
         textFieldOmbro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldOmbroActionPerformed(evt);
@@ -204,6 +210,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldCintura.setText(""+sliderCintura.getValue());
         textFieldCintura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldCinturaActionPerformed(evt);
@@ -217,6 +224,7 @@ public class TempoReal extends javax.swing.JFrame {
             }
         });
 
+        textFieldGarra1.setText(""+sliderGarra.getValue());
         textFieldGarra1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldGarra1ActionPerformed(evt);
@@ -389,31 +397,41 @@ public class TempoReal extends javax.swing.JFrame {
     private void sliderPulsoSStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderPulsoSStateChanged
         JSlider jSlider = (JSlider)evt.getSource(); 
         int iValue = jSlider.getValue(); 
-        textFieldPulsoS.setText (""+iValue);         // TODO add your handling code here:
+        textFieldPulsoS.setText (""+iValue); 
+        creteString();
+        bh.send(sequencia);
     }//GEN-LAST:event_sliderPulsoSStateChanged
 
     private void sliderPulsoGStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderPulsoGStateChanged
         JSlider jSlider = (JSlider)evt.getSource(); 
         int iValue = jSlider.getValue(); 
-        textFieldPulsoG.setText (""+iValue);         // TODO add your handling code here:
+        textFieldPulsoG.setText (""+iValue); 
+        creteString();
+        bh.send(sequencia);
     }//GEN-LAST:event_sliderPulsoGStateChanged
 
     private void sliderCotoveloStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderCotoveloStateChanged
         JSlider jSlider = (JSlider)evt.getSource(); 
         int iValue = jSlider.getValue(); 
-        textFieldCotovelo.setText (""+iValue);         // TODO add your handling code here:
+        textFieldCotovelo.setText (""+iValue);    
+        creteString();
+        bh.send(sequencia);
     }//GEN-LAST:event_sliderCotoveloStateChanged
 
     private void sliderOmbroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderOmbroStateChanged
         JSlider jSlider = (JSlider)evt.getSource(); 
         int iValue = jSlider.getValue(); 
-        textFieldOmbro.setText (""+iValue);         // TODO add your handling code here:
+        textFieldOmbro.setText (""+iValue); 
+        creteString();
+        bh.send(sequencia);
     }//GEN-LAST:event_sliderOmbroStateChanged
 
     private void sliderCinturaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderCinturaStateChanged
         JSlider jSlider = (JSlider)evt.getSource(); 
         int iValue = jSlider.getValue(); 
-        textFieldCintura.setText (""+iValue);         // TODO add your handling code here:
+        textFieldCintura.setText (""+iValue); 
+        creteString();
+         bh.send(sequencia);
     }//GEN-LAST:event_sliderCinturaStateChanged
 
     private void textFieldGarra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldGarra1ActionPerformed
@@ -427,6 +445,26 @@ public class TempoReal extends javax.swing.JFrame {
         mp.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void creteString(){
+          StringB s ;
+          String [][]seq = new String [][]{{textFieldGarra1.getText(),
+                                            textFieldPulsoS.getText(),
+                                            textFieldPulsoG.getText(),
+                                            textFieldCotovelo.getText(),
+                                            textFieldOmbro.getText(),
+                                            textFieldCintura.getText()}};
+        if (btnRadio100.isSelected()){
+            s = new StringB(0,100,seq,linha);
+        }else if(btnRadio50.isSelected()){
+            s = new StringB(0,50,seq,linha);
+        }else{
+            s = new StringB(0,10,seq,linha);
+        }
+      sequencia = s.getString();
+        
+         
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -2,14 +2,17 @@ package bracomecanico.bluetooth;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import javax.microedition.io.Connector;
+import javax.microedition.io.StreamConnection;
 import javax.obex.*;
 
 public class ObexPutClient {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		String serverURL = null;//"btgoep://0C84DCD3E522";
+		String serverURL = "btspp://98D331709FD2:1;authenticate=false;encrypt=false;master=false";
 		if ((args != null) && (args.length > 0)) {
 			serverURL = args[0];
 		}
@@ -28,6 +31,18 @@ public class ObexPutClient {
 
 		System.out.println("Connecting to " + serverURL);
 
+
+		StreamConnection stream = (StreamConnection) Connector.open(serverURL);
+
+		OutputStream outStream=stream.openOutputStream();
+		PrintWriter pWriter=new PrintWriter(new OutputStreamWriter(outStream));
+
+		byte data[] = "0/100,100,50,70,50,60,30".getBytes("iso-8859-1");
+
+		pWriter.print("0/100,100,50,70,50,60,30");
+		pWriter.flush();
+
+		/*
 		ClientSession clientSession = (ClientSession) Connector.open(serverURL);
 		HeaderSet hsConnectReply = clientSession.connect(null);
 		if (hsConnectReply.getResponseCode() != ResponseCodes.OBEX_HTTP_OK) {
@@ -52,6 +67,6 @@ public class ObexPutClient {
 
 		clientSession.disconnect(null);
 
-		clientSession.close();
+		clientSession.close();*/
 	}
 }

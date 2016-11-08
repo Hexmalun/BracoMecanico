@@ -15,19 +15,19 @@ public class BluetoothHelper{
 
 	private static OutputStream os;
 
-	public static void conect(){
+	public static void conect() throws IOException{
 		String serverURL = "btspp://98D331709FD2:1;authenticate=false;encrypt=false;master=false";
 		
 		System.out.println("Connecting to " + serverURL);
 
 
 		StreamConnection stream;
-            try {
+            //try {
                 stream = (StreamConnection) Connector.open(serverURL);
                 os = stream.openOutputStream();
-            } catch (IOException ex) {
-                Logger.getLogger(BluetoothHelper.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            //} catch (IOException ex) {
+              //  Logger.getLogger(BluetoothHelper.class.getName()).log(Level.SEVERE, null, ex);
+            //}
 
 		
 	}

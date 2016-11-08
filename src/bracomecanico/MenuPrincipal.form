@@ -37,6 +37,8 @@
                   <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
                   <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+              <Component id="conectar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Component id="jLabel1" alignment="0" pref="430" max="32767" attributes="0"/>
@@ -50,7 +52,10 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="conectar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -107,6 +112,14 @@
           <Dimension value="[365, 300]"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="conectar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Conectar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="conectarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

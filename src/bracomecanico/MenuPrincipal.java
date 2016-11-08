@@ -5,6 +5,11 @@
  */
 package bracomecanico;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  *
  * @author Mateus
@@ -15,8 +20,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
-        BluetoothHelper.conect();
         initComponents();
+        try {
+            BluetoothHelper.conect();
+            
+            conectar.setVisible(false);
+        } catch (IOException ex) {
+            showMessageDialog(null,"Não foi possivel Conectar");
+            jButton1.setVisible(false);
+            jButton2.setVisible(false);
+            jButton3.setVisible(false);
+            Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+         
+        }
+        
         
     }
 
@@ -33,6 +50,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        conectar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Braço Mecânico");
@@ -82,6 +100,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setMinimumSize(new java.awt.Dimension(365, 300));
         jLabel1.setPreferredSize(new java.awt.Dimension(365, 300));
 
+        conectar.setText("Conectar");
+        conectar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conectarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,6 +117,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(116, 116, 116)
+                .addComponent(conectar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
         );
@@ -103,7 +130,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(conectar))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addContainerGap())
@@ -142,6 +171,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void conectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conectarActionPerformed
+        try {
+            BluetoothHelper.conect();            
+            conectar.setVisible(false);
+        } catch (IOException ex) {
+            showMessageDialog(null,"Não foi possivel Conectar");
+            jButton1.setVisible(false);
+            jButton2.setVisible(false);
+            jButton3.setVisible(false);
+            Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+         
+        }
+    }//GEN-LAST:event_conectarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -174,6 +217,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton conectar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -526,6 +526,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jTable1.getModel().setValueAt(textFieldOmbro.getText(), linha, 4);
         jTable1.getModel().setValueAt(textFieldCintura.getText(), linha, 5);        
         linha++;
+        jTable1.setVisible(rootPaneCheckingEnabled);
         
         
         

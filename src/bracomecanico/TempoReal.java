@@ -14,7 +14,6 @@ import javax.swing.JSlider;
 public class TempoReal extends javax.swing.JFrame {
     private int linha = 0;
     private String sequencia = "nada";
-    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form TelaInicial
      */
@@ -399,7 +398,7 @@ public class TempoReal extends javax.swing.JFrame {
         int iValue = jSlider.getValue(); 
         textFieldPulsoS.setText (""+iValue); 
         creteString();
-        bh.send(sequencia);
+        BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_sliderPulsoSStateChanged
 
     private void sliderPulsoGStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderPulsoGStateChanged
@@ -407,7 +406,7 @@ public class TempoReal extends javax.swing.JFrame {
         int iValue = jSlider.getValue(); 
         textFieldPulsoG.setText (""+iValue); 
         creteString();
-        bh.send(sequencia);
+        BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_sliderPulsoGStateChanged
 
     private void sliderCotoveloStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderCotoveloStateChanged
@@ -415,7 +414,7 @@ public class TempoReal extends javax.swing.JFrame {
         int iValue = jSlider.getValue(); 
         textFieldCotovelo.setText (""+iValue);    
         creteString();
-        bh.send(sequencia);
+        BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_sliderCotoveloStateChanged
 
     private void sliderOmbroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderOmbroStateChanged
@@ -423,7 +422,7 @@ public class TempoReal extends javax.swing.JFrame {
         int iValue = jSlider.getValue(); 
         textFieldOmbro.setText (""+iValue); 
         creteString();
-        bh.send(sequencia);
+        BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_sliderOmbroStateChanged
 
     private void sliderCinturaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderCinturaStateChanged
@@ -431,7 +430,7 @@ public class TempoReal extends javax.swing.JFrame {
         int iValue = jSlider.getValue(); 
         textFieldCintura.setText (""+iValue); 
         creteString();
-         bh.send(sequencia);
+        BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_sliderCinturaStateChanged
 
     private void textFieldGarra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldGarra1ActionPerformed

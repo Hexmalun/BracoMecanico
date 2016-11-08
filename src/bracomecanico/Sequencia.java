@@ -24,7 +24,6 @@ public class Sequencia extends javax.swing.JFrame {
     private File f;
     private int linhas;
     private String sequencia = "nada";
-    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form Sequencia
      */
@@ -363,15 +362,15 @@ public class Sequencia extends javax.swing.JFrame {
 
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
         if(!sequencia.equals("nada"))
-            bh.send(sequencia);
+            BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_enviarActionPerformed
 
     private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
-        bh.send("2");
+        BluetoothHelper.send("2");
     }//GEN-LAST:event_IniciarActionPerformed
 
     private void pararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pararActionPerformed
-        bh.send("3");
+        BluetoothHelper.send("3");
     }//GEN-LAST:event_pararActionPerformed
 
     /**

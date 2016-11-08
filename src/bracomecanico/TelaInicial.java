@@ -22,7 +22,6 @@ import javax.swing.JSlider;
 public class TelaInicial extends javax.swing.JFrame {
     private int linha = 0;
     private String sequencia = "nada";
-    private BluetoothHelper bh = new BluetoothHelper();
     /**
      * Creates new form TelaInicial
      */
@@ -583,7 +582,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         sequencia = createString().getString();
         if(!sequencia.equals(""))
-            bh.send(sequencia);
+            BluetoothHelper.send(sequencia);
     }//GEN-LAST:event_btnEnviarActionPerformed
 
     private void textFieldGarra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldGarra1ActionPerformed
@@ -598,11 +597,11 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
-         bh.send("2");
+         BluetoothHelper.send("2");
     }//GEN-LAST:event_IniciarActionPerformed
 
     private void pararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pararActionPerformed
-        bh.send("3");
+        BluetoothHelper.send("3");
     }//GEN-LAST:event_pararActionPerformed
 
     
